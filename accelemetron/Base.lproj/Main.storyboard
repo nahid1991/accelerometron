@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xbV-eP-FcF">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List Table View Controller-->
+        <scene sceneID="OTx-cl-3qq">
+            <objects>
+                <tableViewController id="xbV-eP-FcF" customClass="ListTableViewController" customModule="accelemetron" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QxY-xn-3kc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="parallaxCell" rowHeight="120" id="jsL-Cs-7WP" customClass="ParallaxCell" customModule="accelemetron" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="120"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jsL-Cs-7WP" id="Ocs-Ev-2oi">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="11W-zz-EhL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CAMERAS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tc4-hs-xXi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-HeavyItalic" family="Avenir Next" pointSize="50"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="11W-zz-EhL" secondAttribute="trailing" id="0kI-ts-c31"/>
+                                        <constraint firstAttribute="bottom" secondItem="11W-zz-EhL" secondAttribute="bottom" id="77S-Ms-6mB"/>
+                                        <constraint firstItem="11W-zz-EhL" firstAttribute="leading" secondItem="Ocs-Ev-2oi" secondAttribute="leading" id="GXk-vX-a2j"/>
+                                        <constraint firstItem="tc4-hs-xXi" firstAttribute="top" secondItem="Ocs-Ev-2oi" secondAttribute="top" id="KAO-z4-jBW"/>
+                                        <constraint firstAttribute="trailing" secondItem="tc4-hs-xXi" secondAttribute="trailing" id="eGL-ot-oG3"/>
+                                        <constraint firstItem="tc4-hs-xXi" firstAttribute="leading" secondItem="Ocs-Ev-2oi" secondAttribute="leading" id="mNW-28-2On"/>
+                                        <constraint firstAttribute="bottom" secondItem="tc4-hs-xXi" secondAttribute="bottom" id="q9m-7W-BB2"/>
+                                        <constraint firstItem="11W-zz-EhL" firstAttribute="top" secondItem="Ocs-Ev-2oi" secondAttribute="top" id="zhM-nR-9hN"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellImageView" destination="11W-zz-EhL" id="LWL-XF-D4O"/>
+                                    <outlet property="descriptionLabel" destination="tc4-hs-xXi" id="zRr-tz-UoZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xbV-eP-FcF" id="6MW-dx-hfa"/>
+                            <outlet property="delegate" destination="xbV-eP-FcF" id="L4N-iI-fRu"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nqX-SS-qTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-53.623188405797109" y="84.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1" width="1080" height="720"/>
+    </resources>
+</document>
